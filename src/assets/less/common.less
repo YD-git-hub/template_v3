@@ -1,0 +1,100 @@
+body,
+html,
+head {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+/* 布局 */
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.items-center {
+  display: flex;
+  align-items: center;
+}
+/* 内边距 */
+.pd16 {
+  padding: 1rem;
+}
+/* 外边距 */
+.mr4 {
+  margin-right: 0.25rem;
+}
+.mr6 {
+  margin-right: 0.375rem;
+}
+.mr10 {
+  margin-right: 0.625rem;
+}
+.m4 {
+  margin-right: 0.25rem;
+}
+.ml6 {
+  margin-right: 0.375rem;
+}
+.ml10 {
+  margin-right: 0.625rem;
+}
+/* 字体大小 */
+.fz14 {
+  font-size: 0.875rem;
+}
+.fz12 {
+  font-size: 0.75rem;
+}
+/* 手势 */
+.pointer {
+  cursor: pointer;
+}
+/* 公共分割 */
+.partition {
+  background: #f8f8f8;
+  height: 1rem;
+}
+/* 超出隐藏 */
+/* 超出一行则省略 */
+.exceedone {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+/*超出2行则省略 */
+.exceedtwo {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+/*超出6行则省略 */
+.exceedsix {
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+}

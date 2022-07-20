@@ -1,10 +1,6 @@
 <template>
     <div class="h-screen bg-red-400" >
-        <keep-alive>
-            <router-view />
-        </keep-alive>
-
-
+        <router-view />
         111
     </div>
 </template>

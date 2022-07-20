@@ -1,10 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*":["src/*"],
-      "#/*":["types/*"]
-    },
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",

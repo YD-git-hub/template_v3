@@ -30,13 +30,13 @@ export default defineConfig({
     host:'0.0.0.0',
     proxy:{
       '/api': {
-        target: 'http://192.168.2.93',
+        target: '',
         changeOrigin: true, //允许跨域
         // ws: true,//websoket支持
         rewrite:(path) => path.replace(/^\/api/,"")
       },
       '/bpi': {
-        target: 'http://carbon.ttdhealth.com',
+        target: '',
         changeOrigin: true, //允许跨域
         // ws: true,//websoket支持
         rewrite:(path) => path.replace(/^\/api/,"")

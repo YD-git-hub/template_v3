@@ -1,9 +1,16 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from "path"
+import { visualizer } from "rollup-plugin-visualizer"
 // https://vitejs.dev/config/
+const lifecycle = process.env.npm_lifecycle_event;
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    lifecycle === 'report'
+      ? visualizer({ open: true, brotliSize: true, filename: 'report.html' })
+      : null
+  ],
   base:"./",
   resolve:{
     alias:{

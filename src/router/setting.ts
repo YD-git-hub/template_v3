@@ -9,19 +9,19 @@ let pubics = [
           {
             path: '/index',
             name: 'Home_index',
-            component: () => import("../views/Home/Index/Home_index.vue"),
+            component: () => import("@/views/Home/Index/Home_index.vue"),
           },
           {
             path: '/News',
             name: 'Home_News',
-            component: () => import("../views/Home/News/Home_News.vue"),
+            component: () => import("@/views/Home/News/Home_News.vue"),
           },
         ]
     },
     {
         path: '/News_Datail',
         name: 'News_Datail',
-        component: () => import("../views/Home/News/News_Datail.vue"),
+        component: () => import("@/views/Home/News/News_Datail.vue"),
         children:[]
     }
 ]

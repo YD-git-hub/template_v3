@@ -13,4 +13,37 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471)
+# 项目目录
+
+template_v3
+├─ .eslintrc.cjs
+├─ .gitignore
+├─ index.html
+├─ LICENSE
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ public
+│  └─ favicon.ico
+├─ README.md
+├─ src
+│  ├─ App.vue
+│  ├─ assets
+│  │  ├─ image
+│  │  └─ less
+│  ├─ axios
+│  │  ├─ api.ts
+│  │  └─ config.ts
+│  ├─ main.ts
+│  ├─ router
+│  │  ├─ index.ts
+│  │  └─ setting.ts
+│  ├─ views
+│  └─ vite-env.d.ts
+├─ tailwind.config.cjs
+├─ tsconfig.json
+├─ tsconfig.node.json
+└─ vite.config.ts
+
+```

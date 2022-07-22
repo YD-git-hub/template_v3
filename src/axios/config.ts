@@ -1,17 +1,13 @@
 import axios from 'axios'; // 引入axios
 import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
 
-import { Toast } from 'vant';
-import 'vant/es/toast/style';
 if (process.env.NODE_ENV === 'development') {
   //本地(开发)环境
-  // axios.defaults.baseURL = '/api';
+  axios.defaults.baseURL = '/api';
   // axios.defaults.baseURL = '/bpi';
-  axios.defaults.baseURL = 'http://carbon.ttdhealth.com';
-
 } else if (process.env.NODE_ENV === 'production') {
   //线上（开发）环境
-  axios.defaults.baseURL = 'http://carbon.ttdhealth.com';
+  axios.defaults.baseURL = '';
 }
 
 axios.defaults.timeout = 10000;
@@ -37,18 +33,18 @@ axios.interceptors.response.use(
       switch (error.response.status) {
         // 401: 未登录
         case 401:
-            Toast.fail('401');
+            console.log('401');
           break;
           // 404请求不存在
         case 404:
-            Toast.fail('网络请求不存在');
+            console.log('网络请求不存在');
           break;
           // 其他错误，直接抛出错误提示
         case 500:
-            Toast.fail('服务器出小差了');
+            console.log('服务器出小差了');
           break;
         default:
-            Toast.fail(error.response.data.message);
+            console.log('error.response.data.message');
           break;
       }
       return Promise.reject(error.response);
